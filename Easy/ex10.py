@@ -7,19 +7,13 @@ class DistincIntegners:
     def SearchIndex(self):
         target = int(input('Insert below the wanted number:\n'))
         self.array.sort()
-        for i in self.array:
-            if i == target:
-                print(f'Index where was founded the target {target}: {[i]}')
-                print(self.array)
-                break
+        print(f'Index where was founded the target {target}: {self.array.index(target)}')
+        print(self.array)
         if target not in self.array:
             self.array.append(target)
             self.array.sort()
-            for i in self.array:
-                if i == target: # Aqui o "i" assume o valor de "target"
-                    print(f'Index where was founded the target {target}: {i}')
-                    print(self.array)
-                    break
+            print(f'Index where was founded the target {target}: {self.array.index(target)}')
+            print(self.array)
                 
 x = DistincIntegners(1,2,3,8,5,9,7)
 x.SearchIndex()
